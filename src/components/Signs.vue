@@ -2,7 +2,7 @@
     <div id="signs">
         <div v-for="(sign, i) in signs" :key=i class="sign" >
             <img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/>
-            <router-link :to="{ path: sign }"><h2>{{sign}}</h2></router-link>
+            <router-link :to="{ path: '/horoscope/' + sign + '/today' }"><h2>{{sign}}</h2></router-link>
         </div>
     </div>
 </template>
@@ -37,6 +37,9 @@ export default {
         margin: 10px;
         padding: 10px;
         text-decoration: none;
+    }
+    .sign a{
+        color: #3a3838;
     }
     a:hover{
         text-decoration: none;

@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <nav>
-            <router-link :to="{ path: this.$route.params.sign + '/yesterday' }" replace>Yesterday </router-link>
-            <router-link :to="{ path: this.$route.params.sign + '/today' }" replace>Today </router-link>
-            <router-link :to="{ path: this.$route.params.sign + '/tomorrow' }" replace>Tomorrow </router-link>
+    <div class="container">
+        <nav class="daynav">
+            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/yesterday'}" >Yesterday </router-link>
+            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/today' }" >Today </router-link>
+            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/tomorrow' }" >Tomorrow </router-link>
         </nav>
-        <div class="text-center">
+        <div class="text-center" v-if="result">
             <img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/>
             <h2>{{this.$route.params.sign}}</h2>
             <h6>{{result.date_range}}</h6>
@@ -44,13 +44,24 @@ export default {
         if (this.day === undefined){
             this.day = "today"
         }
-        console.log(this.sign);
-        console.log(this.day)
-        this.horoscopeFetch()
+        this.horoscopeFetch();
+        console.log("Holis")
     }
 }
 </script>
 <style lang="css" scoped>
+    .daynav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .day{
+        flex: 1 0 auto;
+        color: #3a3838;
+        text-decoration: none;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
     .sign-img{
         width: 150px;
         margin: 15px 0 5px 0;

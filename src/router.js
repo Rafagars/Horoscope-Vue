@@ -13,12 +13,7 @@ const routes = [
         component: Signs,
     },
     {
-        path: "/:sign/",
-        name: "Horoscope",
-        component: Horoscope
-    },
-    {
-        path: "/:sign/:day",
+        path: "/horoscope/:sign/:day",
         name: "Horoscope",
         component: Horoscope,
     }
