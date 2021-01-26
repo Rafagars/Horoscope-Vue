@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <nav class="daynav">
-            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/yesterday'}" >Yesterday </router-link>
-            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/today' }" >Today </router-link>
-            <router-link class="day" :to="{ path: '/horoscope/' + this.$route.params.sign + '/tomorrow' }" >Tomorrow </router-link>
+            <button class="day" @click="changesDay('yesterday')">Yesterday </button>
+            <button class="day" @click="changesDay('today')">Today </button>
+            <button class="day" @click="changesDay('tomorrow')">Tomorrow </button>         
         </nav>
         <div class="text-center" v-if="result">
             <img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/>
@@ -36,6 +36,14 @@ export default {
         getImgUrl(sign){
             let images = require.context('../assets/', false, /\.png$/)
             return images('./' + sign + ".png")
+        },
+        changesDay(day){
+            console.log(day)
+            if(day !== this.day){
+                this.$router.push({name: 'Horoscope', params:{sign: this.sign, day: `${day}`}})
+                location.reload();
+
+            }
         }
     },
     created(){
