@@ -33,7 +33,7 @@ export default {
     .sign{
         flex: 1 0 25%;
         background-color: #efc9df;
-        border: 2px solid #e7d4d8;
+        border: 2px solid #f0bedb;
         margin: 10px;
         padding: 10px;
         text-decoration: none;

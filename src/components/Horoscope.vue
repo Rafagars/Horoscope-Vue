@@ -5,7 +5,7 @@
             <button class="day" @click="changesDay('today')">Today </button>
             <button class="day" @click="changesDay('tomorrow')">Tomorrow </button>         
         </nav>
-        <div class="text-center" v-if="result">
+        <div class="horoscope text-center" v-if="result">
             <img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/>
             <h2>{{this.$route.params.sign}}</h2>
             <h6>{{result.date_range}}</h6>
@@ -62,6 +62,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 2px;
     }
     .day{
         flex: 1 0 auto;
@@ -69,10 +70,20 @@ export default {
         text-decoration: none;
         font-size: 1.3em;
         margin-bottom: 10px;
+        background-color: #f3e6ed;
+        border: 2px solid #f3d6e7;
+    }
+    .day:hover{
+        background-color: #eec9dd;
     }
     .sign-img{
         width: 150px;
         margin: 15px 0 5px 0;
         display: block;
+    }
+    .horoscope {
+        background-color: #efc9df;
+        padding: 10px;
+        border: 2px solid #f0bedb;
     }
 </style>

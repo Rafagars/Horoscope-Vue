@@ -19,6 +19,9 @@ export default {
 <style scoped>
     footer{
         background-color: hotpink;
-        height: 50px;
+        height: 2.5 rem;
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
     }
 </style>
