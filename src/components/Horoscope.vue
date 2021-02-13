@@ -53,7 +53,6 @@ export default {
             this.day = "today"
         }
         this.horoscopeFetch();
-        console.log("Holis")
     }
 }
 </script>

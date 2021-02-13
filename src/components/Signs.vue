@@ -1,8 +1,7 @@
 <template>
     <div id="signs">
         <div v-for="(sign, i) in signs" :key=i class="sign" >
-            <img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/>
-            <router-link :to="{ path: '/horoscope/' + sign + '/today' }"><h2>{{sign}}</h2></router-link>
+            <router-link :to="{ path: '/horoscope/' + sign + '/today' }"><img class="sign-img mx-auto" :src="getImgUrl(sign)" v-bind:alt="sign"/><h2>{{sign}}</h2></router-link>
         </div>
     </div>
 </template>
