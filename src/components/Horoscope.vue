@@ -69,11 +69,13 @@ export default {
         text-decoration: none;
         font-size: 1.3em;
         margin-bottom: 10px;
-        background-color: #f3e6ed;
-        border: 2px solid #f3d6e7;
+        background-color: #f7b7c3;
+        border: 2px solid #f5c0ca;
+        border-radius: 1em;
+        box-shadow: 0 10px 6px -6px #777;
     }
     .day:hover{
-        background-color: #eec9dd;
+        background-color: #f7abba;
     }
     .sign-img{
         width: 150px;
@@ -81,8 +83,9 @@ export default {
         display: block;
     }
     .horoscope {
-        background-color: #efc9df;
+        background-color: #fab1c0;
+        border: 2px solid #f5c0ca;
+        border-radius: 1em;
         padding: 10px;
-        border: 2px solid #f0bedb;
     }
 </style>

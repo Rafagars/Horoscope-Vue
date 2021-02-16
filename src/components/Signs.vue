@@ -31,8 +31,10 @@ export default {
 
     .sign{
         flex: 1 0 25%;
-        background-color: #efc9df;
-        border: 2px solid #f0bedb;
+        background-color: #fab1c0;
+        border: 2px solid #f5c0ca;
+        border-radius: 1em;
+        box-shadow: 0 10px 6px -6px #777;
         margin: 10px;
         padding: 10px;
         text-decoration: none;

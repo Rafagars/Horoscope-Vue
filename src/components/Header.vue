@@ -14,7 +14,8 @@ export default {
 </script>
 <style scoped>
     header{
-        background-color: hotpink;
+        background-color: #f5b9c6;
+        box-shadow: 0 5px 3px -3px rgb(158, 156, 156);
     }
     h1 a, a:hover{
         text-decoration: none;
