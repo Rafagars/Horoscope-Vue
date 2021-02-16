@@ -87,5 +87,6 @@ export default {
         border: 2px solid #f5c0ca;
         border-radius: 1em;
         padding: 10px;
+        box-shadow: 0 10px 6px -6px #777;
     }
 </style>
